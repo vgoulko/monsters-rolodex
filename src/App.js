@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {CardList} from './components/card-list/card-list.components'
+import {SearBox} from './components/search-box/search-box.component';
 
 class App extends Component {
   constructor() {
@@ -24,14 +25,10 @@ class App extends Component {
       monster.name.toLowerCase().includes(searchFields.toLowerCase()));
     return (
         <div className="App">
-          <input
-              type='search'
+            <SearBox
               placeholder='search monster'
-              // onChange={e => console.log(e.target.value)}
-              // onChange={e => this.setState({searchFields: e.target.value}, () => console.log(this.state))}
-              onChange={e => this.setState({searchFields: e.target.value})}
-
-          />
+              handleChange={e => this.setState({searchFields: e.target.value})}
+            />
           <CardList monsters={filteredMonsters} />
         </div>
     )
