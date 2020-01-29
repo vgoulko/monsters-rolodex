@@ -2,7 +2,9 @@
   "name": "monsters-rolodex",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://vgoulko.github.io/monster-rolodex",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
